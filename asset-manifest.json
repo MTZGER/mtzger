@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/mtzger/static/css/main.90d6f047.chunk.css",
+    "main.js": "/mtzger/static/js/main.929091df.chunk.js",
+    "main.js.map": "/mtzger/static/js/main.929091df.chunk.js.map",
+    "runtime-main.js": "/mtzger/static/js/runtime-main.e367cd76.js",
+    "runtime-main.js.map": "/mtzger/static/js/runtime-main.e367cd76.js.map",
+    "static/js/2.7516ad1a.chunk.js": "/mtzger/static/js/2.7516ad1a.chunk.js",
+    "static/js/2.7516ad1a.chunk.js.map": "/mtzger/static/js/2.7516ad1a.chunk.js.map",
+    "index.html": "/mtzger/index.html",
+    "static/css/main.90d6f047.chunk.css.map": "/mtzger/static/css/main.90d6f047.chunk.css.map",
+    "static/js/2.7516ad1a.chunk.js.LICENSE.txt": "/mtzger/static/js/2.7516ad1a.chunk.js.LICENSE.txt",
+    "static/media/grasslight-big.b100e352.jpg": "/mtzger/static/media/grasslight-big.b100e352.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e367cd76.js",
+    "static/js/2.7516ad1a.chunk.js",
+    "static/css/main.90d6f047.chunk.css",
+    "static/js/main.929091df.chunk.js"
+  ]
+}
