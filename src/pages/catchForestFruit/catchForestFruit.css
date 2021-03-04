@@ -3,7 +3,6 @@ canvas {
     height: 100vh;
     min-height: 100vh;
     max-height: 100vh;
-    background-color: white;
 }
 .escape_game {
     position: fixed;
