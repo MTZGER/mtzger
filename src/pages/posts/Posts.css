@@ -2,7 +2,7 @@ body {
     background-color: #222;
 }
 .Posts {
-    position: absolute;
+    position: static;
     top: 0;
     left: 0;
     width: 100%;
