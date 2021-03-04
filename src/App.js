@@ -1,23 +1,27 @@
-import logo from './logo.svg';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom"
 import './App.css';
+import Home from "./pages/Home"
+import Posts from "./pages/posts/Posts"
+import UserPages from "./pages/posts/UserPages"
+import SignUp from "./pages/SignUp"
+import CatchForestFruit from "./pages/catchForestFruit/catchForestFruit"
+import pointerControlTest from "./pages/catchForestFruit/pointerControlTest"
+
+export const urlFolder = "/mtzger"
+// for change homepages name go to package.json and set the homepage attribute to the pages url
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <Route exact path={urlFolder + "/"} component={ Home } />
+        <Route exact path={urlFolder + "/posts"} component={ Posts } />
+        <Route exact path={urlFolder + "/posts/users/:username"} component={ UserPages } />
+        {/* <Route exact path={urlFolder +  "/signup" } component={ SignUp } /> */}
+
+        <Route exact path={ urlFolder + "/catchForestFruit" } component={ CatchForestFruit } />
+        {/* <Route exact path={ urlFolder + "/catchForestFruit" } component={ pointerControlTest } /> */}
+      </Router>
     </div>
   );
 }

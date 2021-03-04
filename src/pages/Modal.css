@@ -1,0 +1,210 @@
+.posts_addPostModal {
+    display: none;
+    z-index: 3;
+}
+.posts_addPostModal_background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(1, 1, 1, 0.5);
+    width: 100%;
+    height: 100%;
+
+    z-index: 3;
+}
+.posts_addPostModal_foreground {
+    /* overflow: auto; */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    width: 50%;
+    height: 60%;
+
+    z-index: 4;
+
+    animation-name: modal_appears;
+    animation-duration: 0.5s;
+}
+.modal_close_icon {
+    position: fixed;
+    top: 5px;
+    right: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #333;
+
+    cursor: pointer;
+    z-index: 5;
+}
+.posts_addPostModal_foreground * {
+    animation-name: modal_appears;
+    animation-duration: 0.5s;
+}
+.modal_title {
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -10%);
+    height: 10px;
+}
+#addPostButton {
+    position: fixed;
+    /* top: 93.5%; */
+    top: 55vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #333;
+    color: white;
+
+    /* margin-bottom: 10px; */
+    height: 35px;
+    width: 75%;
+}
+.addMessage {
+    position: fixed;
+    /* top: 70%; */
+    top: 40vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 85%;
+    max-width: 85%;
+    max-height: 30%;
+    min-height: 30%;
+    padding: 5px;
+
+    outline: none;
+}
+.addInputs {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 120%);
+    width: 85%;
+    height: 52px;
+    margin-bottom: 15px;
+}
+.plus_sign {
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    font-size: 18px;
+    border: 0;
+    background-color: transparent;
+    color: blue;
+    text-decoration: underline blue;
+
+    cursor: pointer;
+}
+
+@media (max-height: 559px), (max-width: 1012px) {
+    .posts_addPostModal_foreground {
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+        /* min-height: 100vh; */
+
+        overflow: auto;
+        min-height: unset;
+        height: 100%;
+    }
+    .addInputs {
+        top: -10px;
+    }
+    .addInputs input {
+        font-size: 13px;
+    }
+    .modal_title {
+        position: absolute;
+        font-size: 20px;
+        width: 100%;
+        text-align: center;
+    }
+    .plus_sign {
+        /* position: relative;
+        bottom: -50vh; */
+        position: absolute;
+        bottom: 50px;
+    }
+    #addPostButton {
+        position: absolute;
+        /* bottom: 90vh; */
+        /* top: 60vh; */
+        top: unset;
+        bottom: 35px;
+        left: 12.5%;
+        height: 35px;
+        transform: translate(0%, 80%);
+        /* transform: none; */
+    }
+    #addPostButtonUnique {
+        position: relative;
+        /* bottom: 90vh; */
+        /* top: 60vh; */
+        top: unset;
+        bottom: -20vh;
+        left: 12.5%;
+        height: 35px;
+        transform: translate(0%, 80%);
+        /* transform: none; */
+    }
+    .addMessage {
+        position: relative;
+        top: 75px;
+        left: 7%;
+        /* margin-left: 6%; */
+        /* margin-top: 75px; */
+        min-height: 40vh;
+        max-height: 40vh;
+        min-width: 82%;
+        max-width: 82%;
+        /* top: 48vh; */
+        /* top: 35vh; */
+        /* bottom: 20px; */
+        transform: none;
+    }
+}
+@media (max-height: 380px) {
+    .posts_addPostModal_foreground {
+        overflow: scroll;
+        min-height: unset;
+        height: 100%;
+    }
+    .plus_sign {
+        /* bottom: -50px; */
+        bottom: -35vh;
+    }
+    #addPostButton {
+        /* bottom: -100px; */
+        bottom: -40vh;
+    }
+}
+@media (max-width: 1000px) and (min-width: 601px) {
+    .modal_title {
+        width: 220px;
+    }
+}
+@keyframes modal_appears {
+    from {
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+        font-size: 0px;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes modal_appears_addBnt {
+    from {
+        opacity: 0;
+        width: 0px;
+        height: 0px;
+        font-size: 0px;
+    }
+    to {
+        opacity: 1;
+    }
+}
