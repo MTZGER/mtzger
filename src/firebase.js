@@ -31,7 +31,7 @@ const firebaseApp = firebase.initializeApp({
 admin.initializeApp({
     credential: admin.credential.applicationDefault(),
     databaseURL: "https://mtzger-d5e6c.firebaseio.com",
-    databaseURL: 'https://mtzger.firebaseio.com'
+    // databaseURL: 'https://mtzger.firebaseio.com'
 })
 
 const db = firebaseApp.firestore();

@@ -33,6 +33,10 @@ import { urlFolder } from "./../App"
 
 // add admin: https://firebase.google.com/docs/admin/setup
 
+
+
+// next step: solve admin access error at admin.getUsersList... at componentDidMount
+
 class Title extends React.Component {
     constructor(props) {
         super(props);
@@ -42,11 +46,12 @@ class Title extends React.Component {
     }
     componentDidMount() {
         this.authChanged();
-        // console.log(admin.auth().listUsers().then(results => {
-        //     results.users.forEach(result => {
-        //         console.log("user: ", result.displayName)
-        //     })
-        // }))
+        // error for Error: Failed to determine project ID: Error while making request: Failed to fetch. :
+        console.log(admin.auth().listUsers().then(results => {
+            results.users.forEach(result => {
+                console.log("user: ", result.displayName)
+            })
+        }))
     }
     componentWillUnmount() {
 
