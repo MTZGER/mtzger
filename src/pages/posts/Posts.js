@@ -34,6 +34,10 @@ class Posts extends React.Component {
                 this.setState({
                     authUser: authUser
                 })
+            } else {
+                this.setState({
+                    authUser: null
+                })
             }
         })
         document.querySelector("#addNewPost").scrollIntoView();
@@ -122,6 +126,10 @@ class Posts extends React.Component {
                 <Button
                     id="addNewPost"
                     onClick={ () => {
+                        if (this.state.authUser == null) {
+                            alert("To send make post, you have to sign in!")
+                            return
+                        }
                         document.querySelector("#addNewPostModal").style.display = "block";
                         document.querySelector("#addNewPostModal").style.animation = "modal_appears 0.5s";
                     } }
