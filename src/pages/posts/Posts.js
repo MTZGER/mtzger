@@ -41,11 +41,7 @@ class Posts extends React.Component {
             }
         })
         // document.querySelector("#addNewPost").scrollIntoView();
-        try {
-            document.querySelectorAll(".post")[document.querySelectorAll(".post").length-1].scrollIntoView();
-        } catch (error) {
-            console.log(error)
-        }
+        window.scrollTo(0,1e10);
     }
     async addNewPost() {
         if (this.state.authUser == null) {
@@ -75,11 +71,8 @@ class Posts extends React.Component {
         document.querySelectorAll("textarea").forEach(event => {
             event.value = ""
         })
-        try {
-            document.querySelectorAll(".post")[document.querySelectorAll(".post").length-1].scrollIntoView();
-        } catch (error) {
-            console.log(error)
-        }
+        // document.querySelector("#addNewPost").scrollIntoView();
+        window.scrollTo(0,1e10);
     }
     changeToUserPage(username) {
         if (this.state.authUser == null) {
