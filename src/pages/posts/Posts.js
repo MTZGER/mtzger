@@ -126,6 +126,7 @@ class Posts extends React.Component {
                         document.querySelector("#addNewPostModal").style.animation = "modal_appears 0.5s";
                     } }
                 >Add new Post</Button>
+                <br />
             </div>
         )
     }
