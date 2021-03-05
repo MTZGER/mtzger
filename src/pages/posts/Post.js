@@ -20,7 +20,8 @@ class Post extends Component {
         await this.setState({
             post_element: document.querySelectorAll(".post")
         })
-        document.querySelector("#addNewPost").scrollIntoView();
+        // document.querySelector("#addNewPost").scrollIntoView();
+        document.querySelectorAll(".post")[document.querySelectorAll(".post").length-1].scrollIntoView();
         auth.onAuthStateChanged((authUser) => {
             if (authUser) {
                 this.setState({
