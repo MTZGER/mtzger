@@ -4,8 +4,10 @@ import MenuIcon from '@material-ui/icons/Menu'
 import { Avatar } from "@material-ui/core"
 import SelfModal from "./Modal"
 import { TextField, Button } from "@material-ui/core"
-import { auth, provider, db, admin } from "./../firebase"
+import { auth, provider, db } from "./../firebase"
 import { urlFolder } from "./../App"
+import { getUsersList } from "./../firebase"
+import * as self_admin from "firebase-admin"
 
 // error: have to use a new app name
 // more infos: bookmark/currentState (Lesezeichen)
@@ -46,12 +48,13 @@ class Title extends React.Component {
     }
     componentDidMount() {
         this.authChanged();
-        // error for Error: Failed to determine project ID: Error while making request: Failed to fetch. :
-        console.log(admin.auth().listUsers().then(results => {
-            results.users.forEach(result => {
-                console.log("user: ", result.displayName)
-            })
-        }))
+        // admin.auth().listUsers().then(results => {
+        //     results.users.forEach(result => {
+        //         console.log('user', result.toJSON());
+        //     })
+        // })
+        getUsersList()
+        // best: https://www.youtube.com/watch?v=Mn-Zwrvx1bo&t=1173s
     }
     componentWillUnmount() {
 
