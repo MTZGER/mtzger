@@ -34,10 +34,10 @@ const firebaseApp = firebase.initializeApp({
 
 // const self_admin = admin.initializeApp(functions.config().firebase)
 const self_admin = admin.initializeApp({
-    projectId: "mtzger-d5e6c",
-    // credential: admin.credential.cert(serviceAccount),
-    credential: admin.credential.applicationDefault(),
-    databaseURL: 'https://mtzger-d5e6c.firebaseio.com'
+    // projectId: "mtzger-d5e6c",
+    credential: admin.credential.cert(serviceAccount),
+    // credential: admin.credential.applicationDefault(),
+    // databaseURL: 'https://mtzger-d5e6c.firebaseio.com'
 })
 
 // fixed              error: Failed to determine project ID: Error while making request: Failed to fetch. Error code: undefined
